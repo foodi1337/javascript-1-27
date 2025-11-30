@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ile sekund - Voloshchuk 3K</title>
+</head>
+<body>
+<div id="wynik" style="color:green; font-size:58px;">
+<script>
+    var D1_vol = prompt("Podaj pierwszy dzień stycznia (D1):", "");
+    var D2_vol = prompt("Podaj drugi dzień stycznia (D2):", "");
+    var D1_vol1 = parseFloat(D1_vol);
+    var D2_vol1 = parseFloat(D2_vol);
+    var roznica_dni = D2_vol1 - D1_vol1;
+    var sekundy_na_dzien = 24 * 60 * 60; // czyli 86400 sekund
+    var ilosc_sekund = roznica_dni * sekundy_na_dzien;
+    document.write("Między dniem " + D1_vol1 + " a " + D2_vol1 + " stycznia minęło " + ilosc_sekund + " sekund.");
+</script>
+</div>
+</body>
+</html>

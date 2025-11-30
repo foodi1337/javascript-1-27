@@ -1,0 +1,2 @@
+document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wykonał: Matvii Voloshchuk mój numer w dzienniku 28, czyli".fontcolor("red").bold().fontsize(7)+"<br>");
+document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mam układ [(28) mod 4=0] układ 4".fontcolor("red").bold().fontsize(7)+"<br>");

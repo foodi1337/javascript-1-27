@@ -1,0 +1,70 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+    <title>Obliczenia trapezu</title>
+</head>
+<body>
+
+<script>
+function poleVoloshchuk(a, b, h) {
+    let a_vol = parseFloat(a),
+        b_vol = parseFloat(b),
+        h_vol = parseFloat(h);
+
+    let pole = 0.5 * (a_vol + b_vol) * h_vol;
+    document.getElementsByName('Pole')[0].value = pole.toFixed(2);
+}
+
+function obwodVoloshchuk(a, b, h) {
+    let a_vol = parseFloat(a),
+        b_vol = parseFloat(b),
+        h_vol = parseFloat(h);
+
+    let c = Math.abs(a_vol - b_vol) / 2;
+    let d = Math.sqrt(c * c + h_vol * h_vol);
+    let obwod = a_vol + b_vol + 2 * d;
+
+    document.getElementsByName('obw')[0].value = obwod.toFixed(2);
+}
+</script>
+
+<form name="formularz" action="..." 
+      onsubmit="
+          poleVoloshchuk(this.pod.value, this.pod2.value, this.wysokosc.value);
+          obwodVoloshchuk(this.pod.value, this.pod2.value, this.wysokosc.value);
+          return false;
+      ">
+    <label>Podaj a= <input size="6" name="pod"></label>
+    <label>Podaj b= <input size="6" name="pod2"></label>
+    <label>Podaj h= <input size="6" name="wysokosc"></label>
+    <br><br>
+    <input type="submit" value="Oblicz">
+    <br><br>
+    <label>Pole= <input size="6" name="Pole"></label>
+    <label>Obwod= <input size="6" name="obw"></label>
+</form>
+
+</body>
+</html>
+
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

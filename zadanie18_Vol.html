@@ -1,0 +1,41 @@
+<!DOCTYPE html>   
+<head>    
+<title> Użycie fukcji </title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:navy;font-size:58px;"> 
+<script language="JavaScript"> 
+var a=parseFloat(prompt("a=","")); 
+var b=parseFloat(prompt("b=","")); 
+
+function suma_vol(a, b) { 
+return a + b; 
+} 
+
+function odejmowanie_vol(a, b) {
+return a - b;
+}
+
+function od_kwadratu_vol(a, b) {
+return {
+   a_kwadrat: a*2,
+   b_kwadrat: b*2
+};
+}
+
+function reszta_vol(a, b) {
+return a % b;
+}
+
+
+let kw = od_kwadratu_vol(a, b);
+
+document.write("suma="+suma_vol(a,b)+"<br>"); 
+document.write("różnica="+odejmowanie_vol(a,b)+"<br>"); 
+document.write("A kwadrat="+kw.a_kwadrat+"; B kwadrat="+kw.b_kwadrat+"<br>");
+document.write("reszta z dzielenia="+reszta_vol(a,b)+"<br>"); 
+</script> 
+</div> 
+</body> 
+</html>

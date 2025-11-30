@@ -1,0 +1,35 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+<!DOCTYPE html>
+ <body>
+ <div style="color:green;font-size:58px;">
+ <script language="JavaScript">
+ var m_vol=prompt("m=","");
+ var b_vol;
+ var c_vol;
+ var d_vol;
+ var e_vol;
+ var a_vol=parseFloat(m_vol);
+     b_vol=a_vol+1;
+     c_vol=a_vol*(a_vol+1);
+     d_vol=b_vol+1;
+     e_vol=b_vol*d_vol;   
+ document.write("1/"+a_vol+" = 1/"+d_vol+" + 1/"+e_vol+" + 1/"+c_vol+"<br>");
+ </script>
+ </div>
+ </body>
+ </html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">

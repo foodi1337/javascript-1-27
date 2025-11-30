@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Proste obliczenia</title>
+</head>
+<body>
+<div style="color:blue;font-size:50px;background-color:grey">
+<script>
+var liczba1 = prompt("liczba1=", "");
+var liczba2 = prompt("liczba2=", "");
+
+var x1_vol = parseFloat(liczba1);
+var x2_vol = parseFloat(liczba2);
+
+var x1_vol_rad = (x1_vol * Math.PI) / 180;
+var x2_vol_rad = (x2_vol * Math.PI) / 180;
+
+var y1_vol = 3 * Math.pow(x1_vol, 6/8);
+var y2_vol = 2 * Math.cos(x1_vol_rad) + 3 * Math.sin(x1_vol_rad);
+var y3_vol = Math.pow(Math.pow(x1_vol,5) + 2 * Math.pow(x2_vol,4), 1/3) * Math.abs(x1_vol - x2_vol);
+
+document.write("x1=" + x1_vol + " st&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2=" + x2_vol + " st<br>");
+document.write("x1=" + x1_vol + " st&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1=" + x1_vol_rad.toFixed(2) + " rad<br>");
+document.write("y1=" + y1_vol.toFixed(2) + "<br>");
+document.write("y2=" + y2_vol.toFixed(2) + "<br>");
+document.write("y3=" + y3_vol.toFixed(2) + "<br>");
+</script>
+</div>
+</body>
+</html>
+ 

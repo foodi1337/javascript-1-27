@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ile sekund - dni i godziny Voloshchuk 3K</title>
+</head>
+<body>
+<div style="color:green; font-size:58px;">
+<script>
+
+var D1_vol = prompt("Podaj pierwszy dzień stycznia (D1):", "");
+var G1_vol = prompt("Podaj godzinę w tym dniu (G1):", "");
+var D2_vol = prompt("Podaj drugi dzień stycznia (D2):", "");
+var G2_vol = prompt("Podaj godzinę w tym dniu (G2):", "");
+
+var D1_vol1 = parseFloat(D1_vol);
+var G1_vol1 = parseFloat(G1_vol);
+var D2_vol1 = parseFloat(D2_vol);
+var G2_vol1 = parseFloat(G2_vol);
+var roznica_dni = D1_vol1 - D2_vol1;
+var roznica_godzin_z_dni = roznica_dni * 24;
+var roznica_godzin = roznica_godzin_z_dni + (G1_vol1 - G2_vol1);
+var ilosc_sekund = roznica_godzin * 3600;
+document.write("Między dniem " + D1_vol1 + " godz. " + G1_vol1 + 
+               " a dniem " + D2_vol1 + " godz. " + G2_vol1 + 
+               " minęło " + ilosc_sekund + " sekund.");
+
+</script>
+</div>
+</body>
+</html>

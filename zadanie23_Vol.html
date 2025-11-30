@@ -1,0 +1,39 @@
+  <html lang="pl-PL"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="styl.css"> 
+ </head> 
+<body> 
+ <script language="Javascript"> 
+  function dlu(d,x) 
+   { 
+ d_liczba= parseFloat(d)
+ x_liczba= parseFloat(x)
+ dra= Math.sqrt(Math.pow(d_liczba,2)+Math.pow(x_liczba,2))
+ document.getElementById('drabinaWynik').value=dra.toFixed(2);  
+   } 
+  function alfa(d,x) 
+   { 
+ d_liczba= parseFloat(d) 
+ x_liczba= parseFloat(x) 
+ dra= Math.sqrt(Math.pow(d_liczba,2)+Math.pow(x_liczba,2))
+ a= Math.asin(d_liczba/dra)
+        document.getElementById('alfaWynik').value =a.toFixed(2);  
+   } 
+ </script> 
+  <form name="formularz" action="..." onsubmit="dlu(this.wysokoscWynik.value,this.odlegloscWynik.value); 
+alfa(this.wysokoscWynik.value,this.odlegloscWynik.value);return false">   
+     Podaj d= 
+        <input  size="6"  name="wysokoscWynik" id="wysokoscWynik"> 
+     Podaj x= 
+        <input  size="6"  name="odlegloscWynik" id="odlegloscWynik"> 
+                       <br>   <br> 
+         <input  TYPE="submit"  Value="oblicz" > 
+                       <br>   <br> 
+       Drabina= 
+           <input  size="6"  name="drabinaWynik" id="drabinaWynik"> 
+       Alfa= 
+          <input  size="6"  name="alfaWynik" id="alfaWynik"> 
+</form> 
+</body> 
+</html>

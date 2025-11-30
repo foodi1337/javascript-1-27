@@ -1,0 +1,41 @@
+<html lang="pl-PL">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+  function pole_voloshchuk(a, b, h) {
+    var a_vol = parseFloat(a);
+    var b_vol = parseFloat(b);
+    var h_vol = parseFloat(h);
+
+    var d = 0.5 * (a_vol + b_vol) * h_vol;
+    document.getElementsByName('Pole')[0].value = d.toFixed(2);
+  }
+
+  function obwod_voloshchuk(a, b, h) {
+    var a_vol = parseFloat(a);
+    var b_vol = parseFloat(b);
+    var h_vol = parseFloat(h);
+
+    var c = Math.abs(a_vol - b_vol) / 2;
+    var d = Math.sqrt(Math.pow(c, 2) + Math.pow(h_vol, 2));
+    var o = a_vol + b_vol + 2 * d;
+
+    document.getElementsByName('obw')[0].value = o.toFixed(2);
+  }
+</script>
+
+<form name="formularz" action="..." onsubmit="pole_voloshchuk(this.pod.value,this.pod2.value,this.wysokosc.value); obwod_voloshchuk(this.pod.value,this.pod2.value,this.wysokosc.value); return false;">
+  Podaj a= <input size="6" name="pod">
+  Podaj b= <input size="6" name="pod2">
+  Podaj h= <input size="6" name="wysokosc">
+  <br><br>
+  <input type="submit" value="oblicz">
+  <br><br>
+  Pole= <input size="6" name="Pole">
+  Obwod= <input size="6" name="obw">
+</form>
+</body>
+</html>

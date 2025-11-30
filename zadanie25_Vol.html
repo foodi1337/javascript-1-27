@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rozpad promieniotwórczy</title>
+</head>
+<body>
+<div style="color:blue; font-size:60px;">
+<script>
+var N0 = prompt("N0=", "");
+var t = prompt("t=", "");
+var T12 = prompt("T1/2=", "");
+
+var N0_vol = parseFloat(N0);
+var t_vol = parseFloat(t);
+var T12_vol = parseFloat(T12);
+
+var lambda_vol = Math.log(2) / T12_vol;
+var N_vol = N0_vol * Math.pow(Math.E, -lambda_vol * t_vol);
+
+document.write("N0=" + N0_vol + " [sztuk]<br>");
+document.write("t=" + t_vol + " [lat]<br>");
+document.write("T1/2=" + T12_vol + " [lat]<br>");
+document.write("Lambda=" + lambda_vol.toFixed(7) + " [1/rok]<br>");
+document.write("N=" + N_vol.toFixed(7) + " [sztuk]<br>");
+<!-- Matvii Voloshchuk -->
+</script>
+</div>
+</body>
+</html>

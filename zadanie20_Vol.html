@@ -1,0 +1,48 @@
+<html lang="pl-PL"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="styl.css"> 
+ </head> 
+<body> 
+ <script type="text/javascript"> 
+  function AB_Vol() 
+   { 
+ var x1= parseFloat(document.getElementById('xa').value); 
+ var y1= parseFloat(document.getElementById('ya').value);
+ var x2= parseFloat(document.getElementById('xb').value); 
+ var y2= parseFloat(document.getElementById('yb').value); 
+ var dl= Math.sqrt(Math.pow((x1-x2),2)+Math.pow((y1-y2),2));
+        document.getElementById("nazwa").innerHTML ="Długość boku AB= "+dl.toFixed(2)+" j";  
+   } 
+  function BC_Vol() 
+   { 
+ var x1= parseFloat(document.getElementById('xb').value); 
+ var y1= parseFloat(document.getElementById('yb').value);
+ var x2= parseFloat(document.getElementById('xc').value); 
+ var y2= parseFloat(document.getElementById('yc').value); 
+ var dl= Math.sqrt(Math.pow((x1-x2),2)+Math.pow((y1-y2),2));
+        document.getElementById("nazwa").innerHTML ="Długość boku BC= "+dl.toFixed(2)+" j";  
+   } 
+  function AC_Vol() 
+   { 
+ var x1= parseFloat(document.getElementById('xa').value); 
+ var y1= parseFloat(document.getElementById('ya').value);
+ var x2= parseFloat(document.getElementById('xc').value); 
+ var y2= parseFloat(document.getElementById('yc').value); 
+ var dl= Math.sqrt(Math.pow((x1-x2),2)+Math.pow((y1-y2),2));
+        document.getElementById("nazwa").innerHTML ="Długość boku AC= "+dl.toFixed(2)+" j";  
+   } 
+ </script> 
+  <h1>Wszystko o TRÓJKĄCIE</h1><br><br> 
+  Podaj punkt xa_Vol: <input type="text" id="xa" value=""><br><br><br>
+  Podaj punkt ya_Vol: <input type="text" id="ya" value=""><br><br><br> 
+  Podaj punkt xb_Vol: <input type="text" id="xb" value=""><br><br><br>
+  Podaj punkt yb_Vol: <input type="text" id="yb" value=""><br><br><br>
+  Podaj punkt xc_Vol: <input type="text" id="xc" value=""><br><br><br>
+  Podaj punkt yc_Vol: <input type="text" id="yc" value=""><br><br><br>
+  <input type="button" name="AB" value="Oblicz długość boku AB" Onclick="AB_Vol()"><br><br> 
+  <input type="button" name="BC" value="Oblicz długość boku BC" Onclick="BC_Vol()"><br><br>
+  <input type="button" name="AB" value="Oblicz długość boku AC" Onclick="AC_Vol()"><br><br> 
+  <div  style="color:red;font-size:50px;"id="nazwa"></div> 
+</body> 
+</html>

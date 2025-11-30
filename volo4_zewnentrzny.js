@@ -1,0 +1,1 @@
+document.write("Szkielet zaliczeniowy JavaScript Matvii Voloshchuk klasa 3K".fontcolor("red").bold().fontsize(7)+"<br>"); 

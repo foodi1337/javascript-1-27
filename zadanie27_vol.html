@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Samolot</title>
+</head>
+<body>
+<div style="color:red; font-size:55px;">
+<script>
+
+    var dl = prompt("dl=", "");
+    var x = prompt("x=", "");
+
+    var dl_vol = parseFloat(dl);
+    var x_vol = parseFloat(x);
+
+    var wys_vol = Math.sqrt(Math.pow(x_vol, 2) - Math.pow(dl_vol, 2));
+    var alfa_vol = Math.asin(wys_vol / x_vol) * 180 / Math.PI;
+
+    document.write("wysokość = " + wys_vol.toFixed(2) + " m<br>");
+    document.write("alfa = " + alfa_vol.toFixed(2) + " st<br>");
+</script>
+</div>
+</body>
+</html>
+
+
